@@ -6,7 +6,8 @@
 #include <cstdio> // EOF
 #include <sstream>
 #include <iostream>
-#include "../include/Resource.hpp"
+#include "Utils/Resource.hpp"
+
 Resource::Resource( const std::string &name )
   : m_name( name.substr( 0, name.find_last_of( "." ) ) )
   , m_extension( name.substr( name.find_last_of( "." ) + 1, ( name.length( ) - m_name.length( ) ) + 1 ) ) { }
